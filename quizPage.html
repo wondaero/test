@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>quizPage</title>
+	<link rel="styleSheet" href="css/normalize.css">
+	<link rel="styleSheet" href="css/layout.css">
+</head>
+<body>
+	<div class="pd10">
+		<div class="cf mg-b10">
+			<h3 class="float-l mp0">남은시간: 1024초</h3>
+			<h3 class="float-r mp0">&#10007;</h3>
+		</div>
+		<div class="mg-b10">
+			<img src="img/20210712_1.jpg" width="100%" height="100%">
+		</div>
+		<div class="mg-b10">
+			<label class="input-style1 w100p">
+				<input id="answer" type="text" placeholder=" ">
+				<strong class="color-000">정답</strong>
+				<span></span>
+			</label>
+		</div>
+		<div class="txt-c">
+			<button id="btn_submit" class="w80 pd10 border0 outline0 bg-ef0"><strong>제출</strong></button>
+			<button id="btn_hint" class="w80 pd10 border0 outline0 bg-cff"><strong>힌트</strong></button>
+		</div>
+	</div>
+	
+	<script>
+		const answer = document.querySelector('#answer');
+		const submitBtn = document.querySelector('#btn_submit');
+		const hintBtn = document.querySelector('#btn_hint');
+		submitBtn.addEventListener('click', function(){
+			if(confirm('\'' + answer.value + '\'로 제출하시겠습니까?')){
+				alert('제출되었습니다.');
+			}else{
+			}
+		})
+		hintBtn.addEventListener('click', function(){
+			if(confirm('광고가 포함됩니다. 진행하시겠습니까?')){
+				alert('A = 1,\nB = 2,\nZ = 26');
+			}
+		})
+		
+	</script>
+</body>
+</html>
