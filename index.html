@@ -6,6 +6,7 @@
     <title>mainPage</title>
 	<link rel="styleSheet" href="css/normalize.css">
 	<link rel="styleSheet" href="css/layout.css">
+	<link rel="styleSheet" href="css/swiper.min.css">
 	<style>
 	</style>
 </head>
@@ -14,27 +15,20 @@
 		<img src="img/solomon.svg" class="v-top" width="auto" height="100%">
 		<strong class="inline-block h100p line-h45px v-top">솔로몬의 하루</strong>
 	</header>
-	<footer class="fixed bottom0 left0 w100p h50 bg-fff border-t-eee txt-c pd-t3 border-box" style="background1:linear-gradient(to bottom, transparent, #fff);">
-		<span id="btn_home" class="txt-c inline-block v-top w50">
-			<img src="img/home-1.png" width="25">
+	<footer class="fixed bottom0 left0 w100p h50 bg-fff border-t-eee txt-c pd-t3 border-box z-idx2" style="background1:linear-gradient(to bottom, transparent, #fff);">
+		<span id="btn_note" class="txt-c inline-block v-top w50" data-icon-idx="0">
+			<img src="img/note_on.svg" width="25" class="none" data-on-off="on">
+			<img src="img/note_off.svg" width="25" data-on-off="off">
 			<!-- <div>Icons made by
 				<a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from
 				<a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
 			</div> -->
 			<br>
-			<strong class="font12">홈</strong>
+			<strong class="font12">퀴즈노트</strong>
 		</span>
-		<span id="btn_quized" class="txt-c inline-block v-top w50">
-			<img src="img/stopwatch-4.png" width="25">
-			<!-- <div>Icons made by
-				<a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from
-				<a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
-			</div> -->
-			<br>
-			<strong class="font12">이전퀴즈</strong>
-		</span>
-		<span id="btn_rank" class="txt-c inline-block v-top w50">
-			<img src="img/users.png" width="25">
+		<span id="btn_rank" class="txt-c inline-block v-top w50" data-icon-idx="1">
+			<img src="img/rank_on.svg" width="25" class="none" data-on-off="on">
+			<img src="img/rank_off.svg" width="25" data-on-off="off">
 			<!-- <div>Icons made by
 				<a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from
 				<a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
@@ -42,8 +36,19 @@
 			<br>
 			<strong class="font12">랭킹</strong>
 		</span>
-		<span id="btn_myPage" class="txt-c inline-block v-top w50">
-			<img src="img/user.png" width="25">
+		<span id="btn_home" class="txt-c inline-block v-top w50" data-icon-idx="2">
+			<img src="img/home_on.svg" width="25" class="none" data-on-off="on">
+			<img src="img/home_off.svg" width="25" data-on-off="off">
+			<!-- <div>Icons made by
+				<a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from
+				<a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+			</div> -->
+			<br>
+			<strong class="font12">홈</strong>
+		</span>
+		<span id="btn_myPage" class="txt-c inline-block v-top w50" data-icon-idx="3">
+			<img src="img/user_on.svg" width="25" class="none" data-on-off="on">
+			<img src="img/user_off.svg" width="25" data-on-off="off">
 			<!-- <div>Icons made by
 				<a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from
 				<a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
@@ -52,193 +57,217 @@
 			<strong class="font12">내정보</strong>
 		</span>
 	</footer>
-	<section id="page_main" class="pd-t45 pd-b50">
-		<div class="pd5">
-			<article class="pd10 bg-fff-0_6 mg-b5 border-eee">
-				<h4 class="mg0 pd-v5">현재 퀴즈</h4>
-				<div class="overflow-x-auto mg-b5">
-					<ul class="list-style-none mp0 w300p cf">
-						<li class="float-l w33_3333p">
-							<img src="img/20210712_1.jpg" width="100%" class="block">
-						</li>
-						<li class="float-l w33_3333p">
-							<img src="img/menuBg.jpg" width="100%" class="block">
-						</li>
-						<li class="float-l w33_3333p">
-							<img src="img/menuBg.jpg" width="100%" class="block">
-						</li>
-					</ul>
+
+	<div id="page_main" class="pd-t45 pd-b50 h100vh border-box">
+		<div class="swiper-container h100p">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide pd5 border-box overflow-y-auto">
+					<section>
+						<article class="pd10 bg-fff-0_6 mg-b5 border-eee">
+							<h4 class="mg0 pd-v5">솔로몬 수첩</h4>
+						</article>
+					</section>
 				</div>
-				<div class="mg-b5">
-					<label class="input-style1 w100p bg-fff">
-						<input type="text" placeholder=" ">
-						<strong class="color-000">정답을 입력해주세요.</strong>
-						<span></span>
-					</label>
+				<div class="swiper-slide pd5 border-box overflow-y-auto">
+					<section>
+						<article class="pd10 bg-fff-0_6 mg-b5 border-eee">
+							<h4 class="mg0 pd-v5">랭킹</h4>
+						</article>
+					</section>
 				</div>
-				<div class="txt-c">
-					<button id="btn_submit" class="w80 pd10 border0 outline0" style="background:#f7f00f;"><strong>제출</strong></button>
-					<button id="btn_hint" class="w80 pd10 border0 outline0" style="background:#e4e4e4;"><strong>힌트</strong></button>
+				<div class="pd5 border-box swiper-slide overflow-y-auto">
+					<section id="page_main">
+						<article class="pd10 bg-fff-0_6 mg-b5 border-eee">
+							<h4 class="mg0 pd-v5">현재 퀴즈</h4>
+							<div class="overflow-x-auto mg-b5">
+								<ul class="list-style-none mp0 cf w100p">
+									<li class="w100p">
+										<img src="img/20210712_1.jpg" width="100%" class="block">
+									</li>
+								</ul>
+							</div>
+							<div class="mg-b5">
+								<label class="input-style1 w100p bg-fff">
+									<input type="text" placeholder=" ">
+									<strong class="color-000">정답을 입력해주세요.</strong>
+									<span></span>
+								</label>
+							</div>
+							<div class="txt-c">
+								<button id="btn_submit" class="w80 pd10 border0 outline0" style="background:#f7f00f;"><strong>제출</strong></button>
+								<button id="btn_hint" class="w80 pd10 border0 outline0" style="background:#e4e4e4;"><strong>힌트</strong></button>
+							</div>
+						</article>
+						<article id="box_quized" class="pd10 bg-fff-0_6 border-eee">
+							<h4 class="mg0 pd-v5 border-b-dashed-ccc">이전 퀴즈</h4>
+							<ul id="quizedList" class="list-style-none mp0">
+								<li class="border-b-eee pd5">
+									<h5 class="mg0 mg-b5">2021-07-12 아침 퀴즈</h5>
+									<div class="cf">
+										<div class="float-l w30p mg-b5" data-type="quized-img">
+											<img src="img/20210712_1.jpg" class="block" width="100%">
+										</div>
+										<div class="float-r w70p pd-l10 border-box" data-type="quized-rank">
+											<span>1등: wondaero</span>
+											<br>
+											<span>2등: wondaero2</span>
+											<br>
+											<span>3등: mike</span>
+											<br>
+										</div>
+										<div class="none" data-type="quized-answer">
+											<div class="mg-b5">
+												<label class="input-style1 w100p bg-fff">
+													<input type="text" placeholder=" ">
+													<strong class="color-000">정답을 입력해주세요.</strong>
+													<span></span>
+												</label>
+											</div>
+											<div class="txt-c">
+												<button id="btn_submit" class="w80 pd10 border0 outline0" style="background:#f7f00f;"><strong>제출</strong></button>
+												<button id="btn_hint" class="w80 pd10 border0 outline0" style="background:#e4e4e4;"><strong>힌트</strong></button>
+												<button id="btn_answer" class="w80 pd10 border0 outline0" style="background:#c1e0ff;"><strong>정답</strong></button>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="border-b-eee pd5">
+									<h5 class="mg0 mg-b5">2021-07-12 아침 퀴즈</h5>
+									<div class="cf">
+										<div class="float-l w30p mg-b5" data-type="quized-img">
+											<img src="img/20210712_1.jpg" class="block" width="100%">
+										</div>
+										<div class="float-r w70p pd-l10 border-box" data-type="quized-rank">
+											<span>1등: wondaero</span>
+											<br>
+											<span>2등: wondaero2</span>
+											<br>
+											<span>3등: mike</span>
+											<br>
+										</div>
+										<div class="none" data-type="quized-answer">
+											<div class="mg-b5">
+												<label class="input-style1 w100p bg-fff">
+													<input type="text" placeholder=" ">
+													<strong class="color-000">정답을 입력해주세요.</strong>
+													<span></span>
+												</label>
+											</div>
+											<div class="txt-c">
+												<button id="btn_submit" class="w80 pd10 border0 outline0" style="background:#f7f00f;"><strong>제출</strong></button>
+												<button id="btn_hint" class="w80 pd10 border0 outline0" style="background:#e4e4e4;"><strong>힌트</strong></button>
+												<button id="btn_answer" class="w80 pd10 border0 outline0" style="background:#c1e0ff;"><strong>정답</strong></button>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="border-b-eee pd5">
+									<h5 class="mg0 mg-b5">2021-07-12 아침 퀴즈</h5>
+									<div class="cf">
+										<div class="float-l w30p mg-b5" data-type="quized-img">
+											<img src="img/20210712_1.jpg" class="block" width="100%">
+										</div>
+										<div class="float-r w70p pd-l10 border-box" data-type="quized-rank">
+											<span>1등: wondaero</span>
+											<br>
+											<span>2등: wondaero2</span>
+											<br>
+											<span>3등: mike</span>
+											<br>
+										</div>
+										<div class="none" data-type="quized-answer">
+											<div class="mg-b5">
+												<label class="input-style1 w100p bg-fff">
+													<input type="text" placeholder=" ">
+													<strong class="color-000">정답을 입력해주세요.</strong>
+													<span></span>
+												</label>
+											</div>
+											<div class="txt-c">
+												<button id="btn_submit" class="w80 pd10 border0 outline0" style="background:#f7f00f;"><strong>제출</strong></button>
+												<button id="btn_hint" class="w80 pd10 border0 outline0" style="background:#e4e4e4;"><strong>힌트</strong></button>
+												<button id="btn_answer" class="w80 pd10 border0 outline0" style="background:#c1e0ff;"><strong>정답</strong></button>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="border-b-eee pd5">
+									<h5 class="mg0 mg-b5">2021-07-12 아침 퀴즈</h5>
+									<div class="cf">
+										<div class="float-l w30p mg-b5" data-type="quized-img">
+											<img src="img/20210712_1.jpg" class="block" width="100%">
+										</div>
+										<div class="float-r w70p pd-l10 border-box" data-type="quized-rank">
+											<span>1등: wondaero</span>
+											<br>
+											<span>2등: wondaero2</span>
+											<br>
+											<span>3등: mike</span>
+											<br>
+										</div>
+										<div class="none" data-type="quized-answer">
+											<div class="mg-b5">
+												<label class="input-style1 w100p bg-fff">
+													<input type="text" placeholder=" ">
+													<strong class="color-000">정답을 입력해주세요.</strong>
+													<span></span>
+												</label>
+											</div>
+											<div class="txt-c">
+												<button id="btn_submit" class="w80 pd10 border0 outline0" style="background:#f7f00f;"><strong>제출</strong></button>
+												<button id="btn_hint" class="w80 pd10 border0 outline0" style="background:#e4e4e4;"><strong>힌트</strong></button>
+												<button id="btn_answer" class="w80 pd10 border0 outline0" style="background:#c1e0ff;"><strong>정답</strong></button>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="border-b-eee pd5">
+									<h5 class="mg0 mg-b5">2021-07-12 아침 퀴즈</h5>
+									<div class="cf">
+										<div class="float-l w30p mg-b5" data-type="quized-img">
+											<img src="img/20210712_1.jpg" class="block" width="100%">
+										</div>
+										<div class="float-r w70p pd-l10 border-box" data-type="quized-rank">
+											<span>1등: wondaero</span>
+											<br>
+											<span>2등: wondaero2</span>
+											<br>
+											<span>3등: mike</span>
+											<br>
+										</div>
+										<div class="none" data-type="quized-answer">
+											<div class="mg-b5">
+												<label class="input-style1 w100p bg-fff">
+													<input type="text" placeholder=" ">
+													<strong class="color-000">정답을 입력해주세요.</strong>
+													<span></span>
+												</label>
+											</div>
+											<div class="txt-c">
+												<button id="btn_submit" class="w80 pd10 border0 outline0" style="background:#f7f00f;"><strong>제출</strong></button>
+												<button id="btn_hint" class="w80 pd10 border0 outline0" style="background:#e4e4e4;"><strong>힌트</strong></button>
+												<button id="btn_answer" class="w80 pd10 border0 outline0" style="background:#c1e0ff;"><strong>정답</strong></button>
+											</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</article>
+					</section>
 				</div>
-			</article>
-			<article id="box_quized" class="pd10 bg-fff-0_6 border-eee">
-				<h4 class="mg0 pd-v5 border-b-dashed-ccc">이전 퀴즈</h4>
-				<ul id="quizedList" class="list-style-none mp0">
-					<li class="border-b-eee pd5">
-						<h5 class="mg0 mg-b5">2021-07-12 아침 퀴즈</h5>
-						<div class="cf">
-							<div class="float-l w30p mg-b5" data-type="quized-img">
-								<img src="img/20210712_1.jpg" class="block" width="100%">
-							</div>
-							<div class="float-r w70p pd-l10 border-box" data-type="quized-rank">
-								<span>1등: wondaero</span>
-								<br>
-								<span>2등: wondaero2</span>
-								<br>
-								<span>3등: mike</span>
-								<br>
-							</div>
-							<div class="none" data-type="quized-answer">
-								<div class="mg-b5">
-									<label class="input-style1 w100p bg-fff">
-										<input type="text" placeholder=" ">
-										<strong class="color-000">정답을 입력해주세요.</strong>
-										<span></span>
-									</label>
-								</div>
-								<div class="txt-c">
-									<button id="btn_submit" class="w80 pd10 border0 outline0" style="background:#f7f00f;"><strong>제출</strong></button>
-									<button id="btn_hint" class="w80 pd10 border0 outline0" style="background:#e4e4e4;"><strong>힌트</strong></button>
-									<button id="btn_answer" class="w80 pd10 border0 outline0" style="background:#c1e0ff;"><strong>정답</strong></button>
-								</div>
-							</div>
-						</div>
-					</li>
-					<li class="border-b-eee pd5">
-						<h5 class="mg0 mg-b5">2021-07-12 아침 퀴즈</h5>
-						<div class="cf">
-							<div class="float-l w30p mg-b5" data-type="quized-img">
-								<img src="img/20210712_1.jpg" class="block" width="100%">
-							</div>
-							<div class="float-r w70p pd-l10 border-box" data-type="quized-rank">
-								<span>1등: wondaero</span>
-								<br>
-								<span>2등: wondaero2</span>
-								<br>
-								<span>3등: mike</span>
-								<br>
-							</div>
-							<div class="none" data-type="quized-answer">
-								<div class="mg-b5">
-									<label class="input-style1 w100p bg-fff">
-										<input type="text" placeholder=" ">
-										<strong class="color-000">정답을 입력해주세요.</strong>
-										<span></span>
-									</label>
-								</div>
-								<div class="txt-c">
-									<button id="btn_submit" class="w80 pd10 border0 outline0" style="background:#f7f00f;"><strong>제출</strong></button>
-									<button id="btn_hint" class="w80 pd10 border0 outline0" style="background:#e4e4e4;"><strong>힌트</strong></button>
-									<button id="btn_answer" class="w80 pd10 border0 outline0" style="background:#c1e0ff;"><strong>정답</strong></button>
-								</div>
-							</div>
-						</div>
-					</li>
-					<li class="border-b-eee pd5">
-						<h5 class="mg0 mg-b5">2021-07-12 아침 퀴즈</h5>
-						<div class="cf">
-							<div class="float-l w30p mg-b5" data-type="quized-img">
-								<img src="img/20210712_1.jpg" class="block" width="100%">
-							</div>
-							<div class="float-r w70p pd-l10 border-box" data-type="quized-rank">
-								<span>1등: wondaero</span>
-								<br>
-								<span>2등: wondaero2</span>
-								<br>
-								<span>3등: mike</span>
-								<br>
-							</div>
-							<div class="none" data-type="quized-answer">
-								<div class="mg-b5">
-									<label class="input-style1 w100p bg-fff">
-										<input type="text" placeholder=" ">
-										<strong class="color-000">정답을 입력해주세요.</strong>
-										<span></span>
-									</label>
-								</div>
-								<div class="txt-c">
-									<button id="btn_submit" class="w80 pd10 border0 outline0" style="background:#f7f00f;"><strong>제출</strong></button>
-									<button id="btn_hint" class="w80 pd10 border0 outline0" style="background:#e4e4e4;"><strong>힌트</strong></button>
-									<button id="btn_answer" class="w80 pd10 border0 outline0" style="background:#c1e0ff;"><strong>정답</strong></button>
-								</div>
-							</div>
-						</div>
-					</li>
-					<li class="border-b-eee pd5">
-						<h5 class="mg0 mg-b5">2021-07-12 아침 퀴즈</h5>
-						<div class="cf">
-							<div class="float-l w30p mg-b5" data-type="quized-img">
-								<img src="img/20210712_1.jpg" class="block" width="100%">
-							</div>
-							<div class="float-r w70p pd-l10 border-box" data-type="quized-rank">
-								<span>1등: wondaero</span>
-								<br>
-								<span>2등: wondaero2</span>
-								<br>
-								<span>3등: mike</span>
-								<br>
-							</div>
-							<div class="none" data-type="quized-answer">
-								<div class="mg-b5">
-									<label class="input-style1 w100p bg-fff">
-										<input type="text" placeholder=" ">
-										<strong class="color-000">정답을 입력해주세요.</strong>
-										<span></span>
-									</label>
-								</div>
-								<div class="txt-c">
-									<button id="btn_submit" class="w80 pd10 border0 outline0" style="background:#f7f00f;"><strong>제출</strong></button>
-									<button id="btn_hint" class="w80 pd10 border0 outline0" style="background:#e4e4e4;"><strong>힌트</strong></button>
-									<button id="btn_answer" class="w80 pd10 border0 outline0" style="background:#c1e0ff;"><strong>정답</strong></button>
-								</div>
-							</div>
-						</div>
-					</li>
-					<li class="border-b-eee pd5">
-						<h5 class="mg0 mg-b5">2021-07-12 아침 퀴즈</h5>
-						<div class="cf">
-							<div class="float-l w30p mg-b5" data-type="quized-img">
-								<img src="img/20210712_1.jpg" class="block" width="100%">
-							</div>
-							<div class="float-r w70p pd-l10 border-box" data-type="quized-rank">
-								<span>1등: wondaero</span>
-								<br>
-								<span>2등: wondaero2</span>
-								<br>
-								<span>3등: mike</span>
-								<br>
-							</div>
-							<div class="none" data-type="quized-answer">
-								<div class="mg-b5">
-									<label class="input-style1 w100p bg-fff">
-										<input type="text" placeholder=" ">
-										<strong class="color-000">정답을 입력해주세요.</strong>
-										<span></span>
-									</label>
-								</div>
-								<div class="txt-c">
-									<button id="btn_submit" class="w80 pd10 border0 outline0" style="background:#f7f00f;"><strong>제출</strong></button>
-									<button id="btn_hint" class="w80 pd10 border0 outline0" style="background:#e4e4e4;"><strong>힌트</strong></button>
-									<button id="btn_answer" class="w80 pd10 border0 outline0" style="background:#c1e0ff;"><strong>정답</strong></button>
-								</div>
-							</div>
-						</div>
-					</li>
-				</ul>
-			</article>
+				<div class="swiper-slide pd5 border-box overflow-y-auto">
+					<section>
+						<article class="pd10 bg-fff-0_6 mg-b5 border-eee">
+							<h4 class="mg0 pd-v5">내정보</h4>
+						</article>
+					</section>
+				</div>
+			</div>
 		</div>
-	</section>
+	</div>
 </div>
+
+<script src="script/swiper.min.js"></script>
 <script>
 	//이전퀴즈 기능
 	let quizedList = document.querySelector('#quizedList');
@@ -265,21 +294,33 @@
 		})
 	}
 
-	//footer button들
-	let btn_home = document.querySelector('#btn_home');
-	let btn_quized = document.querySelector('#btn_quized');
-	let html = document.querySelector('html');
-	btn_home.addEventListener('click', function(){
-		html.scrollTop = 0;
-	})
-	
-	btn_quized.addEventListener('click', function(){
-		let box_quized = document.querySelector('#box_quized');
-		let box_quized_offset = box_quized.getBoundingClientRect().top + window.pageYOffset - 49;
-		html.scrollTop = box_quized_offset;
-	})
+	let iconSection = document.querySelectorAll('[data-icon-idx]');
+	for(let i = 0; i < iconSection.length; i++){
+		iconSection[i].addEventListener('click', function(){
+			let idx = iconSection[i].getAttribute('data-icon-idx');
+			swiper.slideTo(idx, 500);
+		})
+	}
 
+	//slide기능
+	var swiper = new Swiper('.swiper-container', {
+		on: {
+			activeIndexChange: function () {
+				let thisIconSection = document.querySelector('[data-icon-idx="' + this.realIndex + '"]');
+				let iconSection = document.querySelectorAll('[data-icon-idx]');
 
+				for(let i = 0; i < iconSection.length; i++){
+					iconSection[i].querySelector('[data-on-off="on"]').classList.add('none');
+					iconSection[i].querySelector('[data-on-off="off"]').classList.remove('none');
+				}
+
+				thisIconSection.querySelector('[data-on-off="off"]').classList.add('none');
+				thisIconSection.querySelector('[data-on-off="on"]').classList.remove('none');
+			}
+ 		}
+	});
+
+	swiper.slideTo(2, false, false);
 </script>
 </body>
 </html>
