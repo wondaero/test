@@ -10,15 +10,51 @@
 	</style>
 </head>
 <body style="width:100%; background:url(img/main-bg.jpg) no-repeat center; background-attachment:fixed;">
-	<header class="cf pd-h5 h45 border-box fixed top0 left0 w100p bg-fff txt-c" style="background:#f7f00f;">
+	<header class="cf pd-h5 h45 border-box fixed top0 left0 w100p bg-fff txt-c z-idx2" style="background:#f7f00f;">
 		<img src="img/solomon.svg" class="v-top" width="auto" height="100%">
 		<strong class="inline-block h100p line-h45px v-top">솔로몬의 하루</strong>
 	</header>
-	<footer class="fixed bottom0 left0 w100p h50 bg-fff">
+	<footer class="fixed bottom0 left0 w100p h50 bg-fff border-t-eee txt-c pd-t3 border-box" style="background1:linear-gradient(to bottom, transparent, #fff);">
+		<span id="btn_home" class="txt-c inline-block v-top w50">
+			<img src="img/home-1.png" width="25">
+			<!-- <div>Icons made by
+				<a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from
+				<a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+			</div> -->
+			<br>
+			<strong class="font12">홈</strong>
+		</span>
+		<span id="btn_quized" class="txt-c inline-block v-top w50">
+			<img src="img/stopwatch-4.png" width="25">
+			<!-- <div>Icons made by
+				<a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from
+				<a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+			</div> -->
+			<br>
+			<strong class="font12">이전퀴즈</strong>
+		</span>
+		<span id="btn_rank" class="txt-c inline-block v-top w50">
+			<img src="img/users.png" width="25">
+			<!-- <div>Icons made by
+				<a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from
+				<a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+			</div> -->
+			<br>
+			<strong class="font12">랭킹</strong>
+		</span>
+		<span id="btn_myPage" class="txt-c inline-block v-top w50">
+			<img src="img/user.png" width="25">
+			<!-- <div>Icons made by
+				<a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from
+				<a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+			</div> -->
+			<br>
+			<strong class="font12">내정보</strong>
+		</span>
 	</footer>
-	<section class="pd-t45 pd-b50">
+	<section id="page_main" class="pd-t45 pd-b50">
 		<div class="pd5">
-			<article class="pd10 bg-fff-0_5 mg-b5 border-eee">
+			<article class="pd10 bg-fff-0_6 mg-b5 border-eee">
 				<h4 class="mg0 pd-v5">현재 퀴즈</h4>
 				<div class="overflow-x-auto mg-b5">
 					<ul class="list-style-none mp0 w300p cf">
@@ -35,17 +71,17 @@
 				</div>
 				<div class="mg-b5">
 					<label class="input-style1 w100p bg-fff">
-						<input id="answer" type="text" placeholder=" ">
-						<strong class="color-000">정답</strong>
+						<input type="text" placeholder=" ">
+						<strong class="color-000">정답을 입력해주세요.</strong>
 						<span></span>
 					</label>
 				</div>
 				<div class="txt-c">
-					<button id="btn_submit" class="w80 pd10 border0 outline0 bg-ef0"><strong>제출</strong></button>
-					<button id="btn_hint" class="w80 pd10 border0 outline0 bg-cff"><strong>힌트</strong></button>
+					<button id="btn_submit" class="w80 pd10 border0 outline0" style="background:#f7f00f;"><strong>제출</strong></button>
+					<button id="btn_hint" class="w80 pd10 border0 outline0" style="background:#e4e4e4;"><strong>힌트</strong></button>
 				</div>
 			</article>
-			<article class="pd10 bg-fff-0_5 border-eee">
+			<article id="box_quized" class="pd10 bg-fff-0_6 border-eee">
 				<h4 class="mg0 pd-v5 border-b-dashed-ccc">이전 퀴즈</h4>
 				<ul id="quizedList" class="list-style-none mp0">
 					<li class="border-b-eee pd5">
@@ -65,14 +101,15 @@
 							<div class="none" data-type="quized-answer">
 								<div class="mg-b5">
 									<label class="input-style1 w100p bg-fff">
-										<input id="answer" type="text" placeholder=" ">
-										<strong class="color-000">정답</strong>
+										<input type="text" placeholder=" ">
+										<strong class="color-000">정답을 입력해주세요.</strong>
 										<span></span>
 									</label>
 								</div>
 								<div class="txt-c">
-									<button id="btn_submit" class="w80 pd10 border0 outline0 bg-ef0"><strong>제출</strong></button>
-									<button id="btn_hint" class="w80 pd10 border0 outline0 bg-cff"><strong>힌트</strong></button>
+									<button id="btn_submit" class="w80 pd10 border0 outline0" style="background:#f7f00f;"><strong>제출</strong></button>
+									<button id="btn_hint" class="w80 pd10 border0 outline0" style="background:#e4e4e4;"><strong>힌트</strong></button>
+									<button id="btn_answer" class="w80 pd10 border0 outline0" style="background:#c1e0ff;"><strong>정답</strong></button>
 								</div>
 							</div>
 						</div>
@@ -94,14 +131,15 @@
 							<div class="none" data-type="quized-answer">
 								<div class="mg-b5">
 									<label class="input-style1 w100p bg-fff">
-										<input id="answer" type="text" placeholder=" ">
-										<strong class="color-000">정답</strong>
+										<input type="text" placeholder=" ">
+										<strong class="color-000">정답을 입력해주세요.</strong>
 										<span></span>
 									</label>
 								</div>
 								<div class="txt-c">
-									<button id="btn_submit" class="w80 pd10 border0 outline0 bg-ef0"><strong>제출</strong></button>
-									<button id="btn_hint" class="w80 pd10 border0 outline0 bg-cff"><strong>힌트</strong></button>
+									<button id="btn_submit" class="w80 pd10 border0 outline0" style="background:#f7f00f;"><strong>제출</strong></button>
+									<button id="btn_hint" class="w80 pd10 border0 outline0" style="background:#e4e4e4;"><strong>힌트</strong></button>
+									<button id="btn_answer" class="w80 pd10 border0 outline0" style="background:#c1e0ff;"><strong>정답</strong></button>
 								</div>
 							</div>
 						</div>
@@ -123,14 +161,15 @@
 							<div class="none" data-type="quized-answer">
 								<div class="mg-b5">
 									<label class="input-style1 w100p bg-fff">
-										<input id="answer" type="text" placeholder=" ">
-										<strong class="color-000">정답</strong>
+										<input type="text" placeholder=" ">
+										<strong class="color-000">정답을 입력해주세요.</strong>
 										<span></span>
 									</label>
 								</div>
 								<div class="txt-c">
-									<button id="btn_submit" class="w80 pd10 border0 outline0 bg-ef0"><strong>제출</strong></button>
-									<button id="btn_hint" class="w80 pd10 border0 outline0 bg-cff"><strong>힌트</strong></button>
+									<button id="btn_submit" class="w80 pd10 border0 outline0" style="background:#f7f00f;"><strong>제출</strong></button>
+									<button id="btn_hint" class="w80 pd10 border0 outline0" style="background:#e4e4e4;"><strong>힌트</strong></button>
+									<button id="btn_answer" class="w80 pd10 border0 outline0" style="background:#c1e0ff;"><strong>정답</strong></button>
 								</div>
 							</div>
 						</div>
@@ -152,14 +191,15 @@
 							<div class="none" data-type="quized-answer">
 								<div class="mg-b5">
 									<label class="input-style1 w100p bg-fff">
-										<input id="answer" type="text" placeholder=" ">
-										<strong class="color-000">정답</strong>
+										<input type="text" placeholder=" ">
+										<strong class="color-000">정답을 입력해주세요.</strong>
 										<span></span>
 									</label>
 								</div>
 								<div class="txt-c">
-									<button id="btn_submit" class="w80 pd10 border0 outline0 bg-ef0"><strong>제출</strong></button>
-									<button id="btn_hint" class="w80 pd10 border0 outline0 bg-cff"><strong>힌트</strong></button>
+									<button id="btn_submit" class="w80 pd10 border0 outline0" style="background:#f7f00f;"><strong>제출</strong></button>
+									<button id="btn_hint" class="w80 pd10 border0 outline0" style="background:#e4e4e4;"><strong>힌트</strong></button>
+									<button id="btn_answer" class="w80 pd10 border0 outline0" style="background:#c1e0ff;"><strong>정답</strong></button>
 								</div>
 							</div>
 						</div>
@@ -181,14 +221,15 @@
 							<div class="none" data-type="quized-answer">
 								<div class="mg-b5">
 									<label class="input-style1 w100p bg-fff">
-										<input id="answer" type="text" placeholder=" ">
-										<strong class="color-000">정답</strong>
+										<input type="text" placeholder=" ">
+										<strong class="color-000">정답을 입력해주세요.</strong>
 										<span></span>
 									</label>
 								</div>
 								<div class="txt-c">
-									<button id="btn_submit" class="w80 pd10 border0 outline0 bg-ef0"><strong>제출</strong></button>
-									<button id="btn_hint" class="w80 pd10 border0 outline0 bg-cff"><strong>힌트</strong></button>
+									<button id="btn_submit" class="w80 pd10 border0 outline0" style="background:#f7f00f;"><strong>제출</strong></button>
+									<button id="btn_hint" class="w80 pd10 border0 outline0" style="background:#e4e4e4;"><strong>힌트</strong></button>
+									<button id="btn_answer" class="w80 pd10 border0 outline0" style="background:#c1e0ff;"><strong>정답</strong></button>
 								</div>
 							</div>
 						</div>
@@ -199,9 +240,9 @@
 	</section>
 </div>
 <script>
+	//이전퀴즈 기능
 	let quizedList = document.querySelector('#quizedList');
 	let quized = quizedList.getElementsByTagName('li');
-	console.log(quized);
 
 	for(let i = 0; i < quized.length; i++){
 		quized[i].addEventListener('click', function(){
@@ -214,6 +255,7 @@
 				imgBlock.classList.add('w30p');
 				answerBlock.classList.add('none');
 			}
+			
 			let thisImgBlock = quized[i].querySelector('[data-type="quized-img"]');
 			let thisRankBlcok = quized[i].querySelector('[data-type="quized-rank"]');
 			let thisAnswerBlcok = quized[i].querySelector('[data-type="quized-answer"]');
@@ -222,6 +264,22 @@
 			thisAnswerBlcok.classList.remove('none');
 		})
 	}
+
+	//footer button들
+	let btn_home = document.querySelector('#btn_home');
+	let btn_quized = document.querySelector('#btn_quized');
+	let html = document.querySelector('html');
+	btn_home.addEventListener('click', function(){
+		html.scrollTop = 0;
+	})
+	
+	btn_quized.addEventListener('click', function(){
+		let box_quized = document.querySelector('#box_quized');
+		let box_quized_offset = box_quized.getBoundingClientRect().top + window.pageYOffset - 49;
+		html.scrollTop = box_quized_offset;
+	})
+
+
 </script>
 </body>
 </html>

@@ -396,6 +396,7 @@ input[type="number"].no-btn::-webkit-inner-spin-button {
 
 .mg-t0{margin-top:0;}
 .mg-t1{margin-top:1px;}
+.mg-t2{margin-top:2px;}
 .mg-t3{margin-top:3px;}
 .mg-t5{margin-top:5px;}
 .mg-t6{margin-top:6px;}
@@ -566,6 +567,7 @@ input[type="number"].no-btn::-webkit-inner-spin-button {
 .bg-fff, .bg-white{background:#fff;}
 .BG-FFF, .BG-WHITE{background:#fff!important;}
 .bg-fff-0_5{background:rgba(255, 255, 255, .5);}
+.bg-fff-0_6{background:rgba(255, 255, 255, .6);}
 .bg-fff-0_8{background:rgba(255, 255, 255, .8);}
 .bg-65bb00{background:#65bb00;}
 .bg-f5f7f2{background:#f5f7f2;}
@@ -641,6 +643,7 @@ input[type="number"].no-btn::-webkit-inner-spin-button {
 .border-65bb00{border:1px solid #65bb00;}
 .border-t0{border-top:0;}
 .border-t-ccc{border-top:1px solid #ccc;}
+.border-t-eee{border-top:1px solid #eee;}
 .border-t-dashed-gray{border-top:1px dashed gray;}
 .border-t{border-top:1px solid;}
 .border-b{border-bottom:1px solid;}
