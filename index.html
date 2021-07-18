@@ -10,83 +10,90 @@
 	<style>
 	</style>
 </head>
-<body style="width:100%; background:url(img/main-bg.jpg) no-repeat center; background-attachment:fixed;">
+<body class="mx-w500 w100p mg0auto" style="background:url(img/main-bg.jpg) no-repeat center; background-attachment:fixed;">
 	<header class="cf pd-h5 h45 border-box fixed top0 left0 w100p bg-fff txt-c z-idx2" style="background:#f7f00f;">
 		<img src="img/solomon.svg" class="v-top" width="auto" height="100%">
 		<strong class="inline-block h100p line-h45px v-top">솔로몬의 하루</strong>
 	</header>
-	<footer class="fixed bottom0 left0 w100p h50 bg-fff border-t-eee txt-c pd-t3 border-box z-idx2" style="background1:linear-gradient(to bottom, transparent, #fff);">
-		<span id="btn_note" class="txt-c inline-block v-top w50" data-icon-idx="0">
-			<img src="img/note_on.svg" width="25" class="none" data-on-off="on">
-			<img src="img/note_off.svg" width="25" data-on-off="off">
+	<footer class="fixed bottom0 left0 w100p h50 bg-fff border-t-eee border-box z-idx2 flex flex-row" style="background1:linear-gradient(to bottom, transparent, #fff);">
+		<span id="btn_note" class="flex flex-col flex1 txt-c pd-t12" data-icon-idx="0">
+			<img src="img/note_on.svg" height="26" class="none" data-on-off="on">
+			<img src="img/note_off.svg" height="26" data-on-off="off">
 			<!-- <div>Icons made by
 				<a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from
 				<a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
 			</div> -->
 			<br>
-			<strong class="font12">퀴즈노트</strong>
+			<!-- <strong class="font12 color-ccc">퀴즈공모</strong> -->
 		</span>
-		<span id="btn_rank" class="txt-c inline-block v-top w50" data-icon-idx="1">
-			<img src="img/rank_on.svg" width="25" class="none" data-on-off="on">
-			<img src="img/rank_off.svg" width="25" data-on-off="off">
+		<span id="btn_rank" class="flex flex-col flex1 txt-c pd-t12" data-icon-idx="1">
+			<img src="img/rank_on.svg" height="26" class="none" data-on-off="on">
+			<img src="img/rank_off.svg" height="26" data-on-off="off">
 			<!-- <div>Icons made by
 				<a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from
 				<a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
 			</div> -->
 			<br>
-			<strong class="font12">랭킹</strong>
+			<!-- <strong class="font12 color-ccc">랭킹</strong> -->
 		</span>
-		<span id="btn_home" class="txt-c inline-block v-top w50" data-icon-idx="2">
-			<img src="img/home_on.svg" width="25" class="none" data-on-off="on">
-			<img src="img/home_off.svg" width="25" data-on-off="off">
+		<span id="btn_home" class="flex flex-col flex1 txt-c pd-t12" data-icon-idx="2">
+			<img src="img/home_on.svg" height="26" class="none" data-on-off="on">
+			<img src="img/home_off.svg" height="26" data-on-off="off">
 			<!-- <div>Icons made by
 				<a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from
 				<a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
 			</div> -->
 			<br>
-			<strong class="font12">홈</strong>
+			<!-- <strong class="font12 color-ccc">홈</strong> -->
 		</span>
-		<span id="btn_myPage" class="txt-c inline-block v-top w50" data-icon-idx="3">
-			<img src="img/user_on.svg" width="25" class="none" data-on-off="on">
-			<img src="img/user_off.svg" width="25" data-on-off="off">
+		<span id="btn_myPage" class="flex flex-col flex1 txt-c pd-t12" data-icon-idx="3">
+			<img src="img/user_on.svg" height="26" class="none" data-on-off="on">
+			<img src="img/user_off.svg" height="26" data-on-off="off">
 			<!-- <div>Icons made by
 				<a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from
 				<a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
 			</div> -->
 			<br>
-			<strong class="font12">내정보</strong>
+			<!-- <strong class="font12 color-ccc">내정보</strong> -->
+		</span>
+		<span id="btn_myPage" class="flex flex-col flex1 txt-c pd-t12" data-icon-idx="4">
+			<img src="img/admin_on.svg" height="26" class="none" data-on-off="on">
+			<img src="img/admin_off.svg" height="26" data-on-off="off">
+			<!-- <div>Icons made by
+				<a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from
+				<a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+			</div> -->
+			<br>
+			<!-- <strong class="font12 color-ccc">관리</strong> -->
 		</span>
 	</footer>
 
 	<div id="page_main" class="pd-t45 pd-b50 h100vh border-box">
 		<div class="swiper-container h100p">
 			<div class="swiper-wrapper">
-				<div class="swiper-slide pd5 border-box overflow-y-auto">
+				<div class="swiper-slide pd10 border-box overflow-y-auto">
 					<section>
 						<article class="pd10 bg-fff-0_6 mg-b5 border-eee">
-							<h4 class="mg0 pd-v5">솔로몬 수첩</h4>
+							<h4 class="mg0 pd-v5">퀴즈노트</h4>
 						</article>
 					</section>
 				</div>
-				<div class="swiper-slide pd5 border-box overflow-y-auto">
+				<div class="swiper-slide pd10 border-box overflow-y-auto">
 					<section>
 						<article class="pd10 bg-fff-0_6 mg-b5 border-eee">
 							<h4 class="mg0 pd-v5">랭킹</h4>
 						</article>
 					</section>
 				</div>
-				<div class="pd5 border-box swiper-slide overflow-y-auto">
+				<div class="swiper-slide pd10 border-box overflow-y-auto">
 					<section id="page_main">
-						<article class="pd10 bg-fff-0_6 mg-b5 border-eee">
-							<h4 class="mg0 pd-v5">현재 퀴즈</h4>
-							<div class="overflow-x-auto mg-b5">
-								<ul class="list-style-none mp0 cf w100p">
-									<li class="w100p">
-										<img src="img/20210712_1.jpg" width="100%" class="block">
-									</li>
-								</ul>
+						<article class="pd15 bg-fff-0_6 mg-b10 border-eee">
+							<h4 class="mp0 mg-b10">현재 퀴즈</h4>
+							<div class="mg-b10">
+								<img src="img/quizes/1_q.jpg" width="100%" class="block">
+								<img src="img/quizes/1_h.jpg" width="100%" class="block mg-t10">
 							</div>
-							<div class="mg-b5">
+							<div class="mg-b10">
 								<label class="input-style1 w100p bg-fff">
 									<input type="text" placeholder=" ">
 									<strong class="color-000">정답을 입력해주세요.</strong>
@@ -95,10 +102,10 @@
 							</div>
 							<div class="txt-c">
 								<button id="btn_submit" class="w80 pd10 border0 outline0" style="background:#f7f00f;"><strong>제출</strong></button>
-								<button id="btn_hint" class="w80 pd10 border0 outline0" style="background:#e4e4e4;"><strong>힌트</strong></button>
+								<button id="btn_hint" class="pd10 border0 outline0" style="background:#887;"><img src="img/hint.svg" height="16" class="scale1_5"></button>
 							</div>
 						</article>
-						<article id="box_quized" class="pd10 bg-fff-0_6 border-eee">
+						<article id="box_quized" class="pd15 bg-fff-0_6 border-eee">
 							<h4 class="mg0 pd-v5 border-b-dashed-ccc">이전 퀴즈</h4>
 							<ul id="quizedList" class="list-style-none mp0">
 								<li class="border-b-eee pd5">
@@ -255,10 +262,50 @@
 						</article>
 					</section>
 				</div>
-				<div class="swiper-slide pd5 border-box overflow-y-auto">
+				<div class="swiper-slide pd10 border-box overflow-y-auto">
 					<section>
 						<article class="pd10 bg-fff-0_6 mg-b5 border-eee">
 							<h4 class="mg0 pd-v5">내정보</h4>
+						</article>
+					</section>
+				</div>
+				<div class="swiper-slide pd10 border-box overflow-y-auto">
+					<section>
+						<article class="pd10 bg-fff-0_6 mg-b10 border-eee">
+							<h4 class="mg0 mg-b10">퀴즈 업로드</h4>
+						</article>
+						<article class="pd10 bg-fff-0_6 border-eee">
+							<h4 class="mg0 border-b-dashed-eee pd-b10">회원관리</h4>
+							<ul id="memberList" class="list-style-none mp0">
+								<li class="border-b-eee pd10">
+									<div class="mg-b10"><strong>원대로(xzsdeasfe)</strong></div>
+									<div class="mg-b10">신한은행 110-222-83763233</div>
+									<button class="border0 outline0 pd10" style="background:#f7f00f;">
+										<strong class="font14">입금완료</strong>
+									</button>
+								</li>
+								<li class="border-b-eee pd10">
+									<div class="mg-b10"><strong>원대로(xzsdeasfe)</strong></div>
+									<div class="mg-b10">신한은행 110-222-83763233</div>
+									<button class="border0 outline0 pd10" style="background:#f7f00f;">
+										<strong class="font14">입금완료</strong>
+									</button>
+								</li>
+								<li class="border-b-eee pd10">
+									<div class="mg-b10"><strong>원대로(xzsdeasfe)</strong></div>
+									<div class="mg-b10">신한은행 110-222-83763233</div>
+									<button class="border0 outline0 pd10" style="background:#f7f00f;">
+										<strong class="font14">입금완료</strong>
+									</button>
+								</li>
+								<li class="border-b-eee pd10">
+									<div class="mg-b10"><strong>원대로(xzsdeasfe)</strong></div>
+									<div class="mg-b10">신한은행 110-222-83763233</div>
+									<button class="border0 outline0 pd10" style="background:#f7f00f;">
+										<strong class="font14">입금완료</strong>
+									</button>
+								</li>
+							</ul>
 						</article>
 					</section>
 				</div>
@@ -312,10 +359,12 @@
 				for(let i = 0; i < iconSection.length; i++){
 					iconSection[i].querySelector('[data-on-off="on"]').classList.add('none');
 					iconSection[i].querySelector('[data-on-off="off"]').classList.remove('none');
+					// iconSection[i].querySelector('strong').classList.add('color-ccc');
 				}
 
 				thisIconSection.querySelector('[data-on-off="off"]').classList.add('none');
 				thisIconSection.querySelector('[data-on-off="on"]').classList.remove('none');
+				// thisIconSection.querySelector('strong').classList.remove('color-ccc');
 			}
  		}
 	});
